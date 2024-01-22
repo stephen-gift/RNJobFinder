@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
-import Colors from "../../constants/Colors";
+import Colors from "../../constants/Colors/Colors";
 
 export default function JobFinderJobCard({
   icon,
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 25,
     margin: 4,
-    backgroundColor: Colors.Black[100],
+    backgroundColor: Colors.Black[200],
   },
   cardInnerContainer: {
     width: "100%",
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    gap:10
   },
   iconContainer: {
     width: 50,
@@ -67,6 +68,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.Primary[100],
   },
   jobDesc: {
+    flex:1,
     justifyContent: "space-between",
   },
   textLocation: {
@@ -77,7 +79,7 @@ const styles = StyleSheet.create({
   location: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 9,
+    gap: 5,
   },
   JobName: {
     fontSize: 14,
@@ -87,7 +89,7 @@ const styles = StyleSheet.create({
   jobType: {
     fontSize: 14,
     fontWeight: "400",
-    color: Colors.Black[400],
+    color: Colors.Black[500],
   },
   price: {
     fontSize: 12,
@@ -97,6 +99,6 @@ const styles = StyleSheet.create({
   country: {
     fontSize: 14,
     fontWeight: "400",
-    color: Colors.Black[400],
+    color: Colors.Black[500],
   },
 });

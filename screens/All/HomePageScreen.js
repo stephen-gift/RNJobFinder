@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { HomePageContainer } from "../../containers";
+import { JobFinderGeneralCard } from "../../components/Card";
 
 export default function HomePageScreen() {
   return (
-    <View>
+    <JobFinderGeneralCard>
       <Text>HomePageScreen</Text>
       <HomePageContainer />
-    </View>
+    </JobFinderGeneralCard>
   );
 }
 

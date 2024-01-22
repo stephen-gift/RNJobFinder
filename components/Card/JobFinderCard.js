@@ -1,14 +1,9 @@
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
-import Colors from "../../constants/Colors";
+import Colors from "../../constants/Colors/Colors";
 
-
-export default function JobFinderCard({
-  icon,
-  title,
-  jobCount,
-}) {
+export default function JobFinderCard({ icon, title, jobCount }) {
   return (
     <View style={styles.cardContainer}>
       <View style={styles.cardInnerContainer}>
@@ -31,14 +26,18 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.Primary[200],
     borderRadius: 25,
     height: 180,
+    width: 160,
+    maxWidth: 160,
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
+    marginBottom: 10,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2,
     },
+
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,

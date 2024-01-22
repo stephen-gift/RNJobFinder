@@ -6,7 +6,7 @@ import {
   View,
   ViewStyle,
 } from "react-native";
-import Colors from "../../constants/Colors";
+import Colors from "../../constants/Colors/Colors";
 
 export default function JobFinderButton({ children, onPress, style }) {
   return (

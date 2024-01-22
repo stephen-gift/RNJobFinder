@@ -35,7 +35,7 @@ export const TECHJOBSDATA = [
   },
   {
     id: 3,
-    icon: "lightbulb",
+    icon: "bulb",
     jobTitle: "Content Creator",
     jobType: "Part-time",
     amount: 6000,
@@ -67,7 +67,7 @@ export const TECHJOBSDATA = [
   },
   {
     id: 7,
-    icon: "mobile",
+    icon: "phone-portrait",
     jobTitle: "Mobile App Developer",
     jobType: "Contract",
     amount: 8000,
@@ -75,7 +75,7 @@ export const TECHJOBSDATA = [
   },
   {
     id: 8,
-    icon: "network",
+    icon: "server",
     jobTitle: "Network Engineer",
     jobType: "Full-time",
     amount: 8500,
@@ -83,7 +83,7 @@ export const TECHJOBSDATA = [
   },
   {
     id: 9,
-    icon: "security",
+    icon: "warning",
     jobTitle: "Cybersecurity Analyst",
     jobType: "Remote",
     amount: 9300,
@@ -91,7 +91,7 @@ export const TECHJOBSDATA = [
   },
   {
     id: 10,
-    icon: "database",
+    icon: "cloud-download",
     jobTitle: "Database Administrator",
     jobType: "Hybrid",
     amount: 8800,
@@ -107,7 +107,7 @@ export const TECHJOBSDATA = [
   },
   {
     id: 12,
-    icon: "user",
+    icon: "person",
     jobTitle: "UI/UX Researcher",
     jobType: "Part-time",
     amount: 7000,
@@ -139,7 +139,7 @@ export const TECHJOBSDATA = [
   },
   {
     id: 16,
-    icon: "chart",
+    icon: "bar-chart",
     jobTitle: "Data Scientist",
     jobType: "Full-time",
     amount: 9800,
