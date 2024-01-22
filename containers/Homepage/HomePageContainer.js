@@ -4,15 +4,16 @@ import { JOBDATA, TECHJOBSDATA } from "../../constants/Data/DummyData";
 import JobFinderCard from "../../components/Card/JobFinderCard";
 import { JobFinderSeeAll } from "../../components/Button";
 import JobFinderJobCard from "../../components/Card/JobFinderJobCard";
+import { JobFinderGeneralCard } from "../../components/Card";
 
-export default function HomePageContainer() {
+export default function HomePageContainer({ navigation }) {
   const renderJobFinderCards = () => {
     const pairs = [];
-    const first6Items = JOBDATA.slice(0, 6); // Limit to the first 6 items
+    const first4Items = JOBDATA.slice(0, 4); // Limit to the first 6 items
 
-    for (let i = 0; i < first6Items.length; i += 2) {
+    for (let i = 0; i < first4Items.length; i += 2) {
       // Create pairs of items (2 columns)
-      const pair = first6Items.slice(i, i + 2);
+      const pair = first4Items.slice(i, i + 2);
       pairs.push(pair);
     }
     return pairs.map((pair, index) => (
@@ -29,22 +30,31 @@ export default function HomePageContainer() {
     ));
   };
 
-
-
-
+  const handleJobsByCategorySeeAll = () => {
+    navigation.navigate("Jobs By Category");
+  };
+  const handlePopularJobsSeeAll = () => {
+    navigation.navigate("Popular Jobs");
+  };
 
   return (
-    <ScrollView>
+    <JobFinderGeneralCard>
       <View>
-        <JobFinderSeeAll title="Job By Category" />
+        <JobFinderSeeAll
+          title="Job By Category"
+          onPress={handleJobsByCategorySeeAll}
+        />
       </View>
 
       {renderJobFinderCards()}
 
       <View>
-        <JobFinderSeeAll title="Job By Category" />
+        <JobFinderSeeAll
+          title="Popular Jobs"
+          onPress={handlePopularJobsSeeAll}
+        />
       </View>
-      {TECHJOBSDATA.slice(0,5).map((item) => (
+      {TECHJOBSDATA.slice(0, 5).map((item) => (
         <JobFinderJobCard
           key={item.id}
           icon={item.icon}
@@ -54,7 +64,7 @@ export default function HomePageContainer() {
           country={item.country}
         />
       ))}
-    </ScrollView>
+    </JobFinderGeneralCard>
   );
 }
 

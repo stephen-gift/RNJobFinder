@@ -12,6 +12,7 @@ import {
 import {
   FilterContainer,
   FilterDetailsContainer,
+  HomePageContainer,
   JobByCategoryContainer,
   PopularJobsContainer,
 } from "./containers";
@@ -82,7 +83,7 @@ const HomeStack = () => (
   <Stack.Navigator screenOptions={stackScreenOptions}>
     <Stack.Screen
       name="Home"
-      component={HomePageScreen}
+      component={HomePageContainer}
       options={{
         title: "Home",
       }}

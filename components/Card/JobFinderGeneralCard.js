@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 export default function JobFinderGeneralCard({ children }) {
-  return <View style={styles.generalCard}>{children}</View>;
+  return <ScrollView style={styles.generalCard}>{children}</ScrollView>;
 }
 
 const styles = StyleSheet.create({ generalCard: { paddingHorizontal: 15 } });
