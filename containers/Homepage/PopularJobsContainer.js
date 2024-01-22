@@ -1,9 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { StyleSheet, Text, TextInput, View } from "react-native";
+import React, { useState } from "react";
 import { JobFinderGeneralCard, JobFinderJobCard } from "../../components/Card";
 import { TECHJOBSDATA } from "../../constants/Data/DummyData";
+import Colors from "../../constants/Colors/Colors";
+import { JobFinderIcon } from "../../components/Icon";
+import { JobFinderSearchBox } from "../../components/Filter";
 
 export default function PopularJobsContainer() {
+  const [searchText, setSearchText] = useState("");
   const renderJobFinderCards = () => {
     return (
       <View>
@@ -21,7 +25,19 @@ export default function PopularJobsContainer() {
     );
   };
 
-  return <JobFinderGeneralCard>{renderJobFinderCards()}</JobFinderGeneralCard>;
+  const handleSearch = (text) => {
+    setSearchText(text);
+    // Add your search logic here
+    // You might want to filter your data based on the search text
+    // and update the state with the filtered data
+  };
+
+  return (
+    <JobFinderGeneralCard>
+      <JobFinderSearchBox />
+      {renderJobFinderCards()}
+    </JobFinderGeneralCard>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -29,4 +45,5 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
   },
+ 
 });
