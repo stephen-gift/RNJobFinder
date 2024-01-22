@@ -10,6 +10,12 @@ export default function JobFinderJobCard({
   amount,
   country,
 }) {
+  const truncateText = (text, maxLength) => {
+    return text.length > maxLength
+      ? text.substring(0, maxLength) + "..."
+      : text;
+  };
+
   return (
     <View style={styles.cardContainer}>
       <View style={styles.cardInnerContainer}>
@@ -18,7 +24,7 @@ export default function JobFinderJobCard({
             <Ionicons name={icon} size={24} color={Colors.White[100]} />
           </View>
           <View style={styles.jobDesc}>
-            <Text style={styles.JobName}>{jobTitle}</Text>
+            <Text style={styles.JobName}>{truncateText(jobTitle, 10)}</Text>
             <Text style={styles.jobType}>{jobType}</Text>
           </View>
         </View>
@@ -57,7 +63,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    gap:10
+    gap: 10,
   },
   iconContainer: {
     width: 50,
@@ -68,7 +74,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.Primary[100],
   },
   jobDesc: {
-    flex:1,
+    flex: 1,
     justifyContent: "space-between",
   },
   textLocation: {
