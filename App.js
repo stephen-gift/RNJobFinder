@@ -18,11 +18,12 @@ import {
 } from "./containers";
 import Colors from "./constants/Colors/Colors";
 import { Ionicons } from "@expo/vector-icons";
+import { JobFinderIcon } from "./components/Icon";
 
 const BottomTab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-const stackScreenOptions = {
+const stackScreenOptions = ({ navigation }) => ({
   headerStyle: {
     backgroundColor: Colors.Black[100], // Header background color
   },
@@ -42,7 +43,16 @@ const stackScreenOptions = {
   headerTitleStyle: { color: Colors.White[100] },
   headerShadowVisible: false,
   cardStyle: { backgroundColor: Colors.Black[100] },
-};
+  headerBackImage: ({ tintColor }) => (
+    <JobFinderIcon
+      icon={"chevron-back"}
+      bgColor={Colors.Black[700]}
+      color={Colors.White[100]}
+      onPress={() => navigation.goBack()}
+    />
+  ),
+  headerBackTitleVisible: false,
+});
 
 const BottomTabScreenOptions = ({ route }) => ({
   headerStyle: {
@@ -86,6 +96,7 @@ const HomeStack = () => (
       component={HomePageContainer}
       options={{
         title: "Home",
+        
       }}
     />
     <Stack.Screen name="Popular Jobs" component={PopularJobsContainer} />
