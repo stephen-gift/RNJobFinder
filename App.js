@@ -110,17 +110,17 @@ const HomeStack = () => (
 
 const MyJobsStack = () => (
   <Stack.Navigator screenOptions={stackScreenOptions}>
-    <Stack.Screen name="Jobs" component={MyJobsContainer} />
+    <Stack.Screen name="Application Stats" component={MyJobsContainer} />
   </Stack.Navigator>
 );
 const ChatsStack = () => (
   <Stack.Navigator screenOptions={stackScreenOptions}>
-    <Stack.Screen name="chats" component={ChatsContainer} />
+    <Stack.Screen name="Messages" component={ChatsContainer} />
   </Stack.Navigator>
 );
 const ProfileStack = () => (
   <Stack.Navigator screenOptions={stackScreenOptions}>
-    <Stack.Screen name="profile" component={ProfileContainer} />
+    <Stack.Screen name="My Profile" component={ProfileContainer} />
   </Stack.Navigator>
 );
 
