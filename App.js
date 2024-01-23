@@ -10,11 +10,14 @@ import {
   ProfileScreen,
 } from "./screens";
 import {
+  ChatsContainer,
   FilterContainer,
   FilterDetailsContainer,
   HomePageContainer,
   JobByCategoryContainer,
+  MyJobsContainer,
   PopularJobsContainer,
+  ProfileContainer,
 } from "./containers";
 import Colors from "./constants/Colors/Colors";
 import { Ionicons } from "@expo/vector-icons";
@@ -96,13 +99,28 @@ const HomeStack = () => (
       component={HomePageContainer}
       options={{
         title: "Home",
-        
       }}
     />
     <Stack.Screen name="Popular Jobs" component={PopularJobsContainer} />
     <Stack.Screen name="Jobs By Category" component={JobByCategoryContainer} />
     <Stack.Screen name="Filter" component={FilterContainer} />
     <Stack.Screen name="FilterDetails" component={FilterDetailsContainer} />
+  </Stack.Navigator>
+);
+
+const MyJobsStack = () => (
+  <Stack.Navigator screenOptions={stackScreenOptions}>
+    <Stack.Screen name="Jobs" component={MyJobsContainer} />
+  </Stack.Navigator>
+);
+const ChatsStack = () => (
+  <Stack.Navigator screenOptions={stackScreenOptions}>
+    <Stack.Screen name="chats" component={ChatsContainer} />
+  </Stack.Navigator>
+);
+const ProfileStack = () => (
+  <Stack.Navigator screenOptions={stackScreenOptions}>
+    <Stack.Screen name="profile" component={ProfileContainer} />
   </Stack.Navigator>
 );
 
@@ -124,7 +142,7 @@ const BottomTabNavigator = () => (
     />
     <BottomTab.Screen
       name="My Jobs"
-      component={MyJobScreen}
+      component={MyJobsStack}
       options={{
         tabBarStyle: {
           borderTopColor: Colors.Primary[100],
@@ -138,7 +156,7 @@ const BottomTabNavigator = () => (
     />
     <BottomTab.Screen
       name="Chats"
-      component={ChatsScreen}
+      component={ChatsStack}
       options={{
         tabBarStyle: {
           borderTopColor: Colors.Primary[100],
@@ -152,7 +170,7 @@ const BottomTabNavigator = () => (
     />
     <BottomTab.Screen
       name="Profile"
-      component={ProfileScreen}
+      component={ProfileStack}
       options={{
         tabBarStyle: {
           borderTopColor: Colors.Primary[100],
