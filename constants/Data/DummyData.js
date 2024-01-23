@@ -237,3 +237,12 @@ export const MESSAGESDATA = [
     image: "https://randomuser.me/api/portraits/women/8.jpg",
   },
 ];
+
+export const SETTINGSDATA = [
+  { id: "1", name: "Account Security", options: "Security & Others" },
+  { id: "2", name: "Notifications", options: "Payment, Version Aplication" },
+  { id: "3", name: "My Billing", options: "Payment Method Other" },
+  { id: "4", name: "App Apperance", options: "App Apperance Details" },
+  { id: "5", name: "Linked Account", options: "Linked Account Details" },
+  { id: "6", name: "Help center", options: "Faq, contact, privacy policy" },
+];
