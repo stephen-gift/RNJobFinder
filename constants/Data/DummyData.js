@@ -178,3 +178,62 @@ export const TECHJOBSDATA = [
     country: "Denmark",
   },
 ];
+
+export const MESSAGESDATA = [
+  {
+    id: 1,
+    sender: "Musa Van",
+    date: "10/02.2023",
+    message: "Redesign App",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
+  },
+  {
+    id: 2,
+    sender: "LateGan",
+    date: "10/02.2023",
+    message: "You: Oke!",
+    image: "https://randomuser.me/api/portraits/women/2.jpg",
+  },
+  {
+    id: 3,
+    sender: "Meriana",
+    date: "10/02.2023",
+    message: "You: Oke!",
+    image: "https://randomuser.me/api/portraits/men/3.jpg",
+  },
+  {
+    id: 4,
+    sender: "John Doe",
+    date: "10/03.2023",
+    message: "Meeting at 2 PM",
+    image: "https://randomuser.me/api/portraits/women/4.jpg",
+  },
+  {
+    id: 5,
+    sender: "Alice",
+    date: "10/03.2023",
+    message: "Sent a document",
+    image: "https://randomuser.me/api/portraits/men/5.jpg",
+  },
+  {
+    id: 6,
+    sender: "Bob",
+    date: "10/04.2023",
+    message: "You: Thanks!",
+    image: "https://randomuser.me/api/portraits/women/6.jpg",
+  },
+  {
+    id: 7,
+    sender: "Eva",
+    date: "10/04.2023",
+    message: "Party tonight!",
+    image: "https://randomuser.me/api/portraits/men/7.jpg",
+  },
+  {
+    id: 8,
+    sender: "Chris",
+    date: "10/05.2023",
+    message: "Working on new features",
+    image: "https://randomuser.me/api/portraits/women/8.jpg",
+  },
+];
