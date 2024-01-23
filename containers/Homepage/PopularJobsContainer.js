@@ -58,7 +58,6 @@ export default function PopularJobsContainer() {
           color={Colors.White[100]}
           bgColor={Colors.Primary[100]}
           style={styles.filterIconBtn}
-          onPress={handleSearch}
         />
       </View>
 

@@ -10,7 +10,6 @@ import {
 import React from "react";
 import Colors from "../../constants/Colors/Colors";
 
-
 export default function JobFinderSeeAll({
   title,
   onPress,
@@ -45,9 +44,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     gap: 5,
     marginTop: 20,
+    marginBottom: 20,
   },
-  seeAllButton: {},
-  title: { color: "white" },
+  title: { color: Colors.White[100] },
   button: {
     backgroundColor: Colors.Black[700],
     borderRadius: 22,
