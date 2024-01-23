@@ -5,38 +5,19 @@ import Colors from "../../constants/Colors/Colors";
 import { JobFinderIcon } from "../Icon";
 import { TECHJOBSDATA } from "../../constants/Data/DummyData";
 
-export default function JobFinderSearchBox() {
+export default function JobFinderSearchBox({}) {
   const [searchText, setSearchText] = useState("");
-  const [filteredData, setFilteredData] = useState("");
-
-  const createPairs = (data) => {
-    const pairs = [];
-    for (let i = 0; i < data.length; i += 2) {
-      const pair = data.slice(i, i + 2);
-      pairs.push(pair);
-    }
-    return pairs;
-  };
+  const [filteredJobs, setFilteredJobs] = useState([]);
 
   const handleSearch = (text) => {
     setSearchText(text);
-
-    // Assuming you have an initial data source that you want to filter
-    // const filteredData = TECHJOBSDATA.filter((item) =>
-    //   item.category.toLowerCase().includes(text.toLowerCase())
-    // );
-
-    const filteredData = TECHJOBSDATA.filter((jobs) =>
-      jobs.jobTitle.toLowerCase().includes(text)
+    // Filter jobs based on the search text
+    const filtered = TECHJOBSDATA.filter((job) =>
+      job.jobTitle.toLowerCase().includes(text.toLowerCase())
     );
-
-    // You can update your state with the filtered data
-    setFilteredData(filteredData);
-    // Alternatively, you can use the filteredData directly in your render function
-
-    // If you are using pairs and rendering cards, you can do something like this:
-    // setFilteredPairs(createPairs(filteredData));
+    setFilteredJobs(filtered);
   };
+
   return (
     <View style={styles.searchIconFilterBtn}>
       <View style={styles.searchIcon}>
@@ -81,7 +62,7 @@ const styles = StyleSheet.create({
   searchInput: {
     color: Colors.White[100],
     fontSize: 20,
-    fontWeight: 400,
+    // fontWeight: 400,
   },
   filterIconBtn: {
     borderRadius: 15,
